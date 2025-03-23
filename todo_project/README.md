@@ -1,29 +1,24 @@
 Done é um site de tarefas simples em vanilla
 
-
 todo/
-│-- public/               # Arquivos estáticos
+├── public/
 │   ├── favicon.ico       # Ícone do site
-│   ├── imagens/          # Imagens do projeto
-│   ├── fonts/            # Fontes personalizadas
-│-- src/                  # Código-fonte principal
-│   ├── css/              # Estilos CSS
-│   │   ├── style.css     # Estilos globais
-│   │   ├── login.css     # Estilos específicos para login
-│   ├── js/               # Scripts JavaScript
-│   │   ├── main.js       # Código principal
-│   │   ├── router.js     # Gerencia as páginas na SPA
-│   │   ├── auth.js       # Gerencia login e autenticação
-│   │   ├── storage.js    # Gerencia o armazenamento das tarefas
-│   │   ├── components/   # Componentes reutilizáveis
-│   │   │   ├── header.js  # Cabeçalho do site
-│   │   │   ├── todoList.js # Lógica da lista de tarefas
-│   ├── pages/            # Páginas individuais
-│   │   ├── home.html     # Página principal da To-Do List
-│   │   ├── login.html    # Página de login
-│   │   ├── about.html    # Página "Sobre"
-│   │   ├── notfound.html # Página 404
-│   ├── index.html        # Entrada principal do site (SPA)
-│-- .gitignore            # Arquivos ignorados pelo Git
-│-- package.json          # Dependências (caso use npm)
-│-- README.md             # Documentação do projeto
+│   ├── imagens/          # Imagens do projeto (ex.: logo.png)
+│   └── fonts/            # Fontes personalizadas
+└── src/
+    ├── css/
+    │   └── style.css     # Estilos globais
+    ├── js/
+    │   ├── main.js       # Inicialização da aplicação e gerenciamento de estado
+    │   ├── router.js     # Gerencia as rotas da SPA (com lazy loading simples)
+    │   ├── auth.js       # Gerencia login e autenticação
+    │   ├── storage.js    # Gerencia o armazenamento das tarefas
+    │   ├── components/
+    │   │   ├── header.js  # Cabeçalho do site (com template HTML)
+    │   │   └── todoList.js # Lógica e renderização da lista de tarefas
+    │   └── pages/
+    │       ├── home.js      # Módulo da página principal
+    │       ├── login.js     # Módulo da página de login
+    │       ├── about.js     # Módulo da página "Sobre"
+    │       └── notfound.js  # Módulo para página 404
+    └── index.html         # Único arquivo HTML

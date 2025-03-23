@@ -1,13 +1,14 @@
+import './nav.css';
 
 export function loadNav() {
 
     const nav = document.createElement('nav');
-    
+
     nav.innerHTML = `
-        <nav>   
-            <div>
+        <nav>
+            <div class="nav-container" >
                 <header>
-                    <div>A</div>
+                    <div id="avatar">A</div>
                     <button><img src="images/arrow_back.png"></button>
                 </header>
                 <ul>
@@ -17,7 +18,7 @@ export function loadNav() {
                 </ul>
             </div>
         </nav>
-    `;  
+    `;
 
     document.body.insertBefore(nav, document.getElementById('app'));
 }
