@@ -1,24 +1,25 @@
-import './nav.css';
+import '../../css/nav.css';
 
 export function loadNav() {
+    const template = document.createElement('template');
 
-    const nav = document.createElement('nav');
-
-    nav.innerHTML = `
+    template.innerHTML = `
         <nav>
-            <div class="nav-container" >
-                <header>
-                    <div id="avatar">A</div>
-                    <button><img src="images/arrow_back.png"></button>
-                </header>
-                <ul>
-                    <li>Home</li>
-                    <li>Home</li>
-                    <li>Home</li>
-                </ul>
-            </div>
+            <header>
+                <div id="avatar">A</div>
+                <button><img src="images/arrow_back.png"></button>
+            </header>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
         </nav>
     `;
 
-    document.body.insertBefore(nav, document.getElementById('app'));
+    // Clona o conteúdo do template e retorna o <nav>
+    const nav = template.content.querySelector('nav').cloneNode(true);
+
+    // Adiciona o <nav> ao body
+    document.body.appendChild(nav);
 }
