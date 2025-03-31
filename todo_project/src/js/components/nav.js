@@ -5,14 +5,25 @@ export function loadNav() {
 
     template.innerHTML = `
         <nav>
-            <header>
-                <div id="avatar">A</div>
-                <button><img src="images/arrow_back.png"></button>
+            <header contenteditable="false">
+                <div id="avatar" contenteditable="false">A</div>
+                <button type="button" onclick="alert('Button clicked!')" contenteditable="false">
+                    <img src="images/close_icon.svg" alt="close_icon">
+                </button>
             </header>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li>
+                    Lista
+                    <i class="material-icons">chevron_right</i>
+                </li>
+                <li>
+                    Calendário
+                    <i class="material-icons">chevron_right</i>
+                </li>
+                <li>   
+                    Configs
+                    <i class="material-icons">chevron_right</i>
+                </li>
             </ul>
         </nav>
     `;
