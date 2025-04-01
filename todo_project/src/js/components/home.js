@@ -1,40 +1,44 @@
 import '../../css/home.css';
 
 export function loadHome() {
-    const home = document.createElement('main');
+    const template = document.createElement('template');
 
-    home.innerHTML = `
-        <div class="main_tasks_container">
-            <div class="header_tasks_container">
-                <div class="header_tasks_container_label">
+    template.innerHTML = `
+        <main>
+            <div class="tasks-category-container">
+                <div class="tasks-header-container">
                     <p class="header_tasks_container_label_text">To-do</p>
                 </div>
-            </div>
-            <div class="tasks_container_add_task_button">
-                <button class="add_task_button">+</button>
-            </div>
-        </div>
-        <div class="main_tasks_container">
-            <div class="header_tasks_container">
-                <div class="header_tasks_container_label">
-                    <p>In progress</p>
+                <div class="tasks_container_add_task_button">
+                    <button class="add_task_button">+</button>
                 </div>
             </div>
-            <div class="tasks_container_add_task_button">
-                <button class="add_task_button">+</button>
-            </div>
-        </div>
-        <div class="main_tasks_container">
-            <div class="header_tasks_container">
-                <div class="header_tasks_container_label">
-                    <p>Done</p>
+            <div class="tasks-category-container">
+                <div class="tasks-header-container">
+                    <div class="header_tasks_container_label">
+                        <p>In progress</p>
+                    </div>
+                </div>
+                <div class="tasks_container_add_task_button">
+                    <button class="add_task_button">+</button>
                 </div>
             </div>
-            <div class="tasks_container_add_task_button">
-                <button class="add_task_button">+</button>
+            <div class="tasks-category-container">
+                <div class="tasks-header-container">
+                    <div class="header_tasks_container_label">
+                        <p>Done</p>
+                    </div>
+                </div>
+                <div class="tasks_container_add_task_button">
+                    <button class="add_task_button">+</button>
+                </div>
             </div>
-        </div>
+        </main>
     `;
 
-    document.body.appendChild(home);
+
+    const main = template.content.querySelector('main').cloneNode(true);
+
+    // Adiciona o <nav> ao body
+    document.body.appendChild(main);
 }
